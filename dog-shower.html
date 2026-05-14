@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Outdoor Dog Shower Company | Professional Dog Shower Installation</title>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --green:#2d7a4f;
+  --green-dark:#1e5436;
+  --green-light:#e8f5ee;
+  --teal:#3a9e72;
+  --sand:#f5f0e8;
+  --brown:#8b5e3c;
+  --white:#fff;
+  --dark:#1a1a1a;
+  --mid:#555;
+  --light:#f9f9f7;
+  --border:#e0e0d8;
+}
+
+body{font-family:'Nunito',sans-serif;color:var(--dark);background:var(--white);overflow-x:hidden;}
+
+/* NAV */
+nav{background:var(--white);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:999;box-shadow:0 2px 12px rgba(0,0,0,.07);}
+.nav-inner{max-width:1200px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:70px;}
+.nav-logo{font-size:20px;font-weight:900;color:var(--green-dark);line-height:1.1;}
+.nav-logo span{color:var(--teal);}
+.nav-logo small{display:block;font-size:10px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--mid);}
+.nav-links{display:flex;gap:28px;}
+.nav-links a{font-size:13px;font-weight:700;color:var(--mid);text-decoration:none;letter-spacing:.04em;transition:color .2s;}
+.nav-links a:hover{color:var(--green);}
+.nav-cta{background:var(--green);color:#fff;border:none;padding:10px 22px;border-radius:6px;font-size:13px;font-weight:800;cursor:pointer;transition:background .2s;font-family:'Nunito',sans-serif;letter-spacing:.03em;}
+.nav-cta:hover{background:var(--green-dark);}
+
+/* HERO */
+.hero{background:linear-gradient(135deg,#1e5436 0%,#2d7a4f 45%,#3a9e72 100%);min-height:620px;display:flex;align-items:center;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;right:-100px;top:-100px;width:600px;height:600px;background:rgba(255,255,255,.05);border-radius:50%;}
+.hero::after{content:'';position:absolute;right:100px;bottom:-150px;width:400px;height:400px;background:rgba(255,255,255,.04);border-radius:50%;}
+.hero-inner{max-width:1200px;margin:0 auto;padding:80px 24px;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;}
+.hero-tag{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.15);border-radius:100px;padding:6px 16px;font-size:12px;font-weight:700;color:#a8e6c2;letter-spacing:.1em;text-transform:uppercase;margin-bottom:20px;}
+.hero h1{font-size:52px;font-weight:900;color:#fff;line-height:1.1;margin-bottom:20px;}
+.hero h1 em{font-style:normal;color:#7dd9aa;}
+.hero p{font-size:17px;color:rgba(255,255,255,.8);line-height:1.7;margin-bottom:32px;max-width:480px;}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap;}
+.btn-primary{background:#fff;color:var(--green-dark);padding:14px 28px;border-radius:8px;font-size:15px;font-weight:800;text-decoration:none;transition:all .2s;cursor:pointer;border:none;font-family:'Nunito',sans-serif;}
+.btn-primary:hover{background:#f0fdf6;transform:translateY(-1px);}
+.btn-outline{background:transparent;color:#fff;padding:14px 28px;border-radius:8px;font-size:15px;font-weight:700;text-decoration:none;border:2px solid rgba(255,255,255,.4);transition:all .2s;cursor:pointer;font-family:'Nunito',sans-serif;}
+.btn-outline:hover{border-color:#fff;background:rgba(255,255,255,.08);}
+.hero-visual{display:flex;justify-content:center;}
+.hero-icon-wrap{background:rgba(255,255,255,.12);border-radius:24px;padding:48px;display:flex;flex-direction:column;align-items:center;gap:16px;backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.2);}
+.hero-icon-wrap svg{filter:drop-shadow(0 4px 12px rgba(0,0,0,.2));}
+.hero-badges{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;}
+.badge{background:rgba(255,255,255,.15);border-radius:8px;padding:8px 14px;font-size:12px;font-weight:700;color:#fff;}
+
+/* TRUST BAR */
+.trust-bar{background:var(--sand);border-top:1px solid #e0d8cc;border-bottom:1px solid #e0d8cc;padding:20px 24px;}
+.trust-bar-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:space-around;align-items:center;flex-wrap:wrap;gap:16px;}
+.trust-item{display:flex;align-items:center;gap:10px;font-size:13px;font-weight:700;color:var(--green-dark);}
+.trust-item svg{color:var(--teal);}
+
+/* SECTION COMMON */
+section{padding:80px 24px;}
+.section-inner{max-width:1200px;margin:0 auto;}
+.section-label{font-size:11px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--teal);margin-bottom:10px;}
+.section-title{font-size:38px;font-weight:900;color:var(--dark);margin-bottom:16px;line-height:1.15;}
+.section-sub{font-size:16px;color:var(--mid);line-height:1.7;max-width:600px;}
+
+/* SERVICES */
+.services-bg{background:var(--light);}
+.services-header{text-align:center;margin-bottom:52px;}
+.services-header .section-sub{margin:0 auto;}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+.service-card{background:#fff;border-radius:16px;padding:36px 28px;border:1px solid var(--border);transition:all .25s;position:relative;overflow:hidden;}
+.service-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--green),var(--teal));}
+.service-card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(0,0,0,.1);}
+.service-icon{width:56px;height:56px;background:var(--green-light);border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:20px;}
+.service-card h3{font-size:20px;font-weight:800;margin-bottom:10px;color:var(--dark);}
+.service-card p{font-size:14px;color:var(--mid);line-height:1.7;}
+.service-card ul{margin-top:14px;list-style:none;}
+.service-card ul li{font-size:13px;color:var(--mid);padding:4px 0;display:flex;align-items:center;gap:8px;}
+.service-card ul li::before{content:'✓';color:var(--teal);font-weight:800;flex-shrink:0;}
+
+/* PRODUCTS */
+.products-header{text-align:center;margin-bottom:52px;}
+.products-header .section-sub{margin:0 auto;}
+.products-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+.product-card{background:#fff;border-radius:16px;overflow:hidden;border:1px solid var(--border);transition:all .25s;display:flex;flex-direction:column;}
+.product-card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(0,0,0,.1);}
+.product-card.featured{border:2px solid var(--green);position:relative;}
+.product-badge{position:absolute;top:16px;right:16px;background:var(--green);color:#fff;font-size:11px;font-weight:800;padding:4px 12px;border-radius:100px;letter-spacing:.08em;text-transform:uppercase;}
+.product-img{height:180px;display:flex;align-items:center;justify-content:center;font-size:72px;}
+.product-img.shower-basic{background:linear-gradient(135deg,#e8f5ee,#c8ead8);}
+.product-img.shower-premium{background:linear-gradient(135deg,#e8f0f5,#c8d8ea);}
+.product-img.shelter-basic{background:linear-gradient(135deg,#f5eee8,#ead8c8);}
+.product-img.shelter-premium{background:linear-gradient(135deg,#f0e8f5,#d8c8ea);}
+.product-img.bundle{background:linear-gradient(135deg,#eef5e8,#d8eac8);}
+.product-img.custom{background:linear-gradient(135deg,#f5f0e8,#eae0c8);}
+.product-body{padding:24px;flex:1;display:flex;flex-direction:column;}
+.product-body h3{font-size:18px;font-weight:800;margin-bottom:6px;}
+.product-body p{font-size:13px;color:var(--mid);line-height:1.6;flex:1;}
+.product-features{margin:14px 0;list-style:none;}
+.product-features li{font-size:12.5px;color:var(--mid);padding:3px 0;display:flex;align-items:flex-start;gap:7px;}
+.product-features li::before{content:'✓';color:var(--teal);font-weight:800;flex-shrink:0;margin-top:1px;}
+.product-price{margin-top:16px;padding-top:16px;border-top:1px solid var(--border);display:flex;align-items:flex-end;gap:6px;}
+.price-from{font-size:11px;font-weight:700;color:var(--mid);margin-bottom:4px;}
+.price-amount{font-size:32px;font-weight:900;color:var(--green-dark);}
+.price-vat{font-size:11px;color:var(--mid);margin-bottom:6px;}
+.product-btn{display:block;margin-top:16px;background:var(--green);color:#fff;text-align:center;padding:12px;border-radius:8px;font-size:13px;font-weight:800;border:none;cursor:pointer;font-family:'Nunito',sans-serif;transition:background .2s;}
+.product-btn:hover{background:var(--green-dark);}
+.product-card.featured .product-btn{background:var(--green-dark);}
+
+/* HOW IT WORKS */
+.how-bg{background:var(--green-dark);color:#fff;}
+.how-inner{max-width:1200px;margin:0 auto;}
+.how-header{text-align:center;margin-bottom:52px;}
+.how-header .section-label{color:#7dd9aa;}
+.how-header .section-title{color:#fff;}
+.how-header .section-sub{color:rgba(255,255,255,.7);margin:0 auto;}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;position:relative;}
+.steps::before{content:'';position:absolute;top:36px;left:10%;right:10%;height:2px;background:rgba(255,255,255,.15);z-index:0;}
+.step{text-align:center;position:relative;z-index:1;}
+.step-num{width:72px;height:72px;background:rgba(255,255,255,.15);border:2px solid rgba(255,255,255,.3);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:900;color:#fff;margin:0 auto 20px;}
+.step h4{font-size:16px;font-weight:800;color:#fff;margin-bottom:8px;}
+.step p{font-size:13px;color:rgba(255,255,255,.65);line-height:1.6;}
+
+/* GALLERY STRIP */
+.gallery-strip{display:flex;gap:0;overflow:hidden;height:200px;}
+.gallery-item{flex:1;display:flex;align-items:center;justify-content:center;font-size:60px;transition:flex .3s;}
+.gallery-item:nth-child(1){background:linear-gradient(135deg,#2d7a4f,#3a9e72);}
+.gallery-item:nth-child(2){background:linear-gradient(135deg,#3a9e72,#4dbf8a);}
+.gallery-item:nth-child(3){background:linear-gradient(135deg,#1e5436,#2d7a4f);}
+.gallery-item:nth-child(4){background:linear-gradient(135deg,#4dbf8a,#3a9e72);}
+.gallery-item:nth-child(5){background:linear-gradient(135deg,#2d7a4f,#1e5436);}
+.gallery-item:hover{flex:2;}
+
+/* BOOKING */
+.booking-bg{background:var(--sand);}
+.booking-inner{max-width:900px;margin:0 auto;}
+.booking-header{text-align:center;margin-bottom:40px;}
+.booking-form{background:#fff;border-radius:20px;padding:48px;box-shadow:0 8px 40px rgba(0,0,0,.08);border:1px solid var(--border);}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:20px;}
+.form-group{display:flex;flex-direction:column;gap:6px;margin-bottom:20px;}
+.form-group label{font-size:12px;font-weight:800;color:var(--dark);letter-spacing:.06em;text-transform:uppercase;}
+.form-group input,.form-group select,.form-group textarea{border:1.5px solid var(--border);border-radius:8px;padding:12px 14px;font-size:14px;font-family:'Nunito',sans-serif;color:var(--dark);background:#fff;transition:border .2s;outline:none;}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--teal);}
+.form-group textarea{resize:vertical;min-height:100px;}
+.form-check-group{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+.form-check{display:flex;align-items:center;gap:10px;padding:12px 16px;border:1.5px solid var(--border);border-radius:8px;cursor:pointer;transition:all .2s;font-size:13px;font-weight:700;}
+.form-check:hover{border-color:var(--teal);background:var(--green-light);}
+.form-check input{width:16px;height:16px;accent-color:var(--green);}
+.form-submit{margin-top:8px;}
+.form-submit button{width:100%;background:var(--green);color:#fff;border:none;padding:16px;border-radius:10px;font-size:16px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;transition:background .2s;letter-spacing:.03em;}
+.form-submit button:hover{background:var(--green-dark);}
+.form-note{text-align:center;margin-top:14px;font-size:12px;color:var(--mid);}
+.success-msg{display:none;text-align:center;padding:40px;background:var(--green-light);border-radius:12px;border:2px solid var(--teal);}
+.success-msg h3{font-size:22px;font-weight:800;color:var(--green-dark);margin-bottom:8px;}
+.success-msg p{color:var(--mid);}
+
+/* TESTIMONIALS */
+.testimonials-header{text-align:center;margin-bottom:40px;}
+.testimonials-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+.testimonial{background:var(--light);border-radius:14px;padding:28px;border:1px solid var(--border);}
+.stars{color:#f5a623;font-size:16px;margin-bottom:12px;}
+.testimonial blockquote{font-size:14px;color:var(--mid);line-height:1.7;font-style:italic;margin-bottom:16px;}
+.testimonial-author{font-size:13px;font-weight:800;color:var(--dark);}
+.testimonial-loc{font-size:12px;color:var(--mid);}
+
+/* FOOTER */
+footer{background:var(--dark);color:rgba(255,255,255,.6);padding:48px 24px 24px;}
+.footer-inner{max-width:1200px;margin:0 auto;}
+.footer-top{display:grid;grid-template-columns:2fr 1fr 1fr;gap:48px;margin-bottom:40px;}
+.footer-brand{font-size:18px;font-weight:900;color:#fff;margin-bottom:10px;}
+.footer-brand span{color:#7dd9aa;}
+.footer-tagline{font-size:13px;line-height:1.6;margin-bottom:16px;}
+.footer-contact a{display:block;color:rgba(255,255,255,.7);text-decoration:none;font-size:13px;margin-bottom:6px;transition:color .2s;}
+.footer-contact a:hover{color:#fff;}
+.footer-col h4{font-size:11px;font-weight:800;letter-spacing:.15em;text-transform:uppercase;color:#fff;margin-bottom:16px;}
+.footer-col a{display:block;color:rgba(255,255,255,.6);text-decoration:none;font-size:13px;margin-bottom:8px;transition:color .2s;}
+.footer-col a:hover{color:#fff;}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:20px;display:flex;justify-content:space-between;align-items:center;font-size:12px;}
+
+/* MODAL */
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:9999;align-items:center;justify-content:center;}
+.modal-overlay.open{display:flex;}
+.modal{background:#fff;border-radius:16px;padding:40px;max-width:500px;width:90%;text-align:center;}
+.modal h3{font-size:24px;font-weight:800;margin-bottom:12px;color:var(--green-dark);}
+.modal p{color:var(--mid);margin-bottom:24px;}
+.modal-close{background:var(--green);color:#fff;border:none;padding:12px 28px;border-radius:8px;font-size:14px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .hero-inner{grid-template-columns:1fr;}
+  .hero-visual{display:none;}
+  .hero h1{font-size:36px;}
+  .services-grid,.products-grid,.steps,.testimonials-grid,.footer-top{grid-template-columns:1fr;}
+  .form-row,.form-check-group{grid-template-columns:1fr;}
+  .steps::before{display:none;}
+  .booking-form{padding:24px;}
+  nav .nav-links{display:none;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <div class="nav-logo">
+      The Outdoor Dog Shower Co.
+      <small>Professional Installation Specialists</small>
+    </div>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#products">Products</a>
+      <a href="#how-it-works">How It Works</a>
+      <a href="#booking">Book Now</a>
+    </div>
+    <button class="nav-cta" onclick="scrollToBooking()">Get a Free Quote</button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-tag">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+        UK's #1 Outdoor Dog Shower Specialists
+      </div>
+      <h1>Give Your Dog the <em>Perfect Outdoor Wash</em></h1>
+      <p>Professional outdoor dog shower installations and bespoke weatherproof shelter builds — designed for UK gardens. Durable, stylish, and your dog will love it.</p>
+      <div class="hero-btns">
+        <button class="btn-primary" onclick="scrollToBooking()">Book a Free Survey</button>
+        <a href="#products" class="btn-outline">View Products & Prices</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-icon-wrap">
+        <svg width="120" height="120" viewBox="0 0 100 100" fill="none">
+          <!-- Dog silhouette -->
+          <ellipse cx="50" cy="62" rx="26" ry="18" fill="rgba(255,255,255,0.9)"/>
+          <circle cx="72" cy="52" r="14" fill="rgba(255,255,255,0.9)"/>
+          <ellipse cx="80" cy="44" rx="7" ry="5" fill="rgba(255,255,255,0.9)" transform="rotate(-20 80 44)"/>
+          <ellipse cx="36" cy="76" rx="4" ry="8" fill="rgba(255,255,255,0.9)"/>
+          <ellipse cx="48" cy="79" rx="4" ry="8" fill="rgba(255,255,255,0.9)"/>
+          <ellipse cx="60" cy="79" rx="4" ry="8" fill="rgba(255,255,255,0.9)"/>
+          <!-- Water drops -->
+          <circle cx="25" cy="30" r="3" fill="#7dd9aa" opacity="0.8"/>
+          <circle cx="40" cy="20" r="2" fill="#7dd9aa" opacity="0.7"/>
+          <circle cx="55" cy="25" r="2.5" fill="#7dd9aa" opacity="0.9"/>
+          <circle cx="30" cy="15" r="2" fill="#7dd9aa" opacity="0.6"/>
+          <circle cx="45" cy="10" r="1.5" fill="#7dd9aa" opacity="0.8"/>
+          <!-- Shower head -->
+          <rect x="10" y="5" width="20" height="6" rx="3" fill="rgba(255,255,255,0.6)"/>
+          <line x1="12" y1="11" x2="10" y2="18" stroke="rgba(255,255,255,0.5)" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="16" y1="11" x2="15" y2="20" stroke="rgba(255,255,255,0.5)" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="20" y1="11" x2="20" y2="20" stroke="rgba(255,255,255,0.5)" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="24" y1="11" x2="25" y2="20" stroke="rgba(255,255,255,0.5)" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="28" y1="11" x2="30" y2="18" stroke="rgba(255,255,255,0.5)" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+        <div class="hero-badges">
+          <div class="badge">🐾 Dog Friendly</div>
+          <div class="badge">🌧️ Weatherproof</div>
+          <div class="badge">🔧 Fully Installed</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-bar-inner">
+    <div class="trust-item">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+      Fully Insured & Certified
+    </div>
+    <div class="trust-item">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+      Free Site Survey
+    </div>
+    <div class="trust-item">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+      5-Year Workmanship Guarantee
+    </div>
+    <div class="trust-item">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+      500+ Happy Customers
+    </div>
+    <div class="trust-item">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+      UK Nationwide Coverage
+    </div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="services-bg" id="services">
+  <div class="section-inner">
+    <div class="services-header">
+      <div class="section-label">What We Do</div>
+      <h2 class="section-title">Outdoor Dog Shower Solutions</h2>
+      <p class="section-sub">From a single wall-mounted shower to a full bespoke dog wash shelter — we design, supply, and install everything you need.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2d7a4f" stroke-width="2.2"><path d="M4 18V7a2 2 0 012-2h3M20 18V7a2 2 0 00-2-2h-3"/><path d="M8 5V3M16 5V3"/><path d="M4 18h16"/><path d="M9 12h6M9 15h6M9 9h6"/></svg>
+        </div>
+        <h3>Dog Shower Installation</h3>
+        <p>Wall-mounted and free-standing outdoor shower units, plumbed directly to your mains supply with hot and cold options.</p>
+        <ul>
+          <li>Hot & cold water supply</li>
+          <li>Non-slip base or tray included</li>
+          <li>Adjustable height shower head</li>
+          <li>Dog-safe non-toxic materials</li>
+          <li>Drains directly to garden or waste</li>
+        </ul>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2d7a4f" stroke-width="2.2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <h3>Dog Shower Shelters</h3>
+        <p>Bespoke weatherproof shelter structures built around your shower — keeping you and your dog dry in all conditions.</p>
+        <ul>
+          <li>Timber or steel frame options</li>
+          <li>Corrugated or polycarbonate roofing</li>
+          <li>Optional side panels & doors</li>
+          <li>Custom sizes to fit your garden</li>
+          <li>Treated for outdoor use</li>
+        </ul>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2d7a4f" stroke-width="2.2"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+        </div>
+        <h3>Bespoke Design & Build</h3>
+        <p>Have something specific in mind? We work with you to design a fully custom outdoor dog washing station to your exact spec.</p>
+        <ul>
+          <li>Full design consultation</li>
+          <li>3D visual before build starts</li>
+          <li>Any size or configuration</li>
+          <li>Integrated storage options</li>
+          <li>Premium finishes available</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section id="products">
+  <div class="section-inner">
+    <div class="products-header">
+      <div class="section-label">Products & Pricing</div>
+      <h2 class="section-title">Choose Your Package</h2>
+      <p class="section-sub">All prices include full installation. We'll confirm exact costs after your free site survey.</p>
+    </div>
+    <div class="products-grid">
+
+      <div class="product-card">
+        <div class="product-img shower-basic">🚿</div>
+        <div class="product-body">
+          <h3>Essential Shower</h3>
+          <p>A simple, reliable cold-water outdoor shower — perfect for rinsing muddy paws after walks.</p>
+          <ul class="product-features">
+            <li>Cold water wall-mounted unit</li>
+            <li>Non-slip rubber mat</li>
+            <li>Standard shower head</li>
+            <li>Mains-connected & drained</li>
+          </ul>
+          <div class="product-price">
+            <div>
+              <div class="price-from">From</div>
+              <div class="price-amount">£395</div>
+              <div class="price-vat">inc. VAT & installation</div>
+            </div>
+          </div>
+          <button class="product-btn" onclick="scrollToBooking('Essential Shower')">Book This</button>
+        </div>
+      </div>
+
+      <div class="product-card featured">
+        <div class="product-badge">Most Popular</div>
+        <div class="product-img shower-premium">🐶</div>
+        <div class="product-body">
+          <h3>Comfort Shower</h3>
+          <p>Hot and cold water with a premium adjustable-height head — the full outdoor washing experience.</p>
+          <ul class="product-features">
+            <li>Hot & cold thermostatic mixer</li>
+            <li>Height-adjustable head & hose</li>
+            <li>Stainless steel non-slip tray</li>
+            <li>Tie post & grooming hook</li>
+            <li>All plumbing included</li>
+          </ul>
+          <div class="product-price">
+            <div>
+              <div class="price-from">From</div>
+              <div class="price-amount">£695</div>
+              <div class="price-vat">inc. VAT & installation</div>
+            </div>
+          </div>
+          <button class="product-btn" onclick="scrollToBooking('Comfort Shower')">Book This</button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img shelter-basic">🏠</div>
+        <div class="product-body">
+          <h3>Shelter Add-On</h3>
+          <p>A sturdy weatherproof canopy over your existing or new shower to keep everything protected year-round.</p>
+          <ul class="product-features">
+            <li>Pressure-treated timber frame</li>
+            <li>Polycarbonate roof panel</li>
+            <li>Fits most shower setups</li>
+            <li>Quick 1-day installation</li>
+          </ul>
+          <div class="product-price">
+            <div>
+              <div class="price-from">From</div>
+              <div class="price-amount">£550</div>
+              <div class="price-vat">inc. VAT & installation</div>
+            </div>
+          </div>
+          <button class="product-btn" onclick="scrollToBooking('Shelter Add-On')">Book This</button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img shelter-premium">🏡</div>
+        <div class="product-body">
+          <h3>Premium Shelter</h3>
+          <p>A fully enclosed weatherproof dog wash station with side panels, integrated storage, and a choice of finishes.</p>
+          <ul class="product-features">
+            <li>Fully clad timber or steel frame</li>
+            <li>Side panels & hinged door</li>
+            <li>Integrated towel & product storage</li>
+            <li>Choice of cladding colour</li>
+            <li>Lighting option available</li>
+          </ul>
+          <div class="product-price">
+            <div>
+              <div class="price-from">From</div>
+              <div class="price-amount">£1,195</div>
+              <div class="price-vat">inc. VAT & installation</div>
+            </div>
+          </div>
+          <button class="product-btn" onclick="scrollToBooking('Premium Shelter')">Book This</button>
+        </div>
+      </div>
+
+      <div class="product-card featured">
+        <div class="product-badge">Best Value</div>
+        <div class="product-img bundle">🐾</div>
+        <div class="product-body">
+          <h3>Complete Station Bundle</h3>
+          <p>Our most popular combo — Comfort Shower + Premium Shelter together, saving you over £200 vs. buying separately.</p>
+          <ul class="product-features">
+            <li>Comfort hot & cold shower</li>
+            <li>Premium fully enclosed shelter</li>
+            <li>Integrated storage shelf</li>
+            <li>Tie post & grooming hook</li>
+            <li>Professional installation</li>
+            <li>5-year workmanship guarantee</li>
+          </ul>
+          <div class="product-price">
+            <div>
+              <div class="price-from">From</div>
+              <div class="price-amount">£1,695</div>
+              <div class="price-vat">inc. VAT & installation</div>
+            </div>
+          </div>
+          <button class="product-btn" onclick="scrollToBooking('Complete Station Bundle')">Book This</button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img custom">✏️</div>
+        <div class="product-body">
+          <h3>Bespoke Design</h3>
+          <p>Something specific in mind? We'll design and build a completely custom dog washing station to your exact requirements.</p>
+          <ul class="product-features">
+            <li>Free design consultation</li>
+            <li>3D visual before build</li>
+            <li>Any size or layout</li>
+            <li>Premium material choices</li>
+            <li>Price on application</li>
+          </ul>
+          <div class="product-price">
+            <div>
+              <div class="price-from">&nbsp;</div>
+              <div class="price-amount">POA</div>
+              <div class="price-vat">tailored to your project</div>
+            </div>
+          </div>
+          <button class="product-btn" onclick="scrollToBooking('Bespoke Design')">Get a Quote</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how-bg" id="how-it-works" style="padding:80px 24px;">
+  <div class="how-inner">
+    <div class="how-header">
+      <div class="section-label">The Process</div>
+      <h2 class="section-title">How It Works</h2>
+      <p class="section-sub">From first enquiry to washing your dog — here's what to expect when you choose us.</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h4>Book a Free Survey</h4>
+        <p>Fill in our quick form and we'll visit your property for a free no-obligation site survey and consultation.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h4>Receive Your Quote</h4>
+        <p>We'll send you a detailed, fixed-price quote within 48 hours — no hidden costs, ever.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h4>We Install</h4>
+        <p>Our expert team completes most installations in a single day, with minimal disruption to you or your garden.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <h4>Enjoy!</h4>
+        <p>Your dog gets a wash, you stay clean — and your garden stays mud-free. Job done.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY STRIP -->
+<div class="gallery-strip">
+  <div class="gallery-item">🐕</div>
+  <div class="gallery-item">🚿</div>
+  <div class="gallery-item">🌿</div>
+  <div class="gallery-item">🐾</div>
+  <div class="gallery-item">🏡</div>
+</div>
+
+<!-- TESTIMONIALS -->
+<section>
+  <div class="section-inner">
+    <div class="testimonials-header">
+      <div class="section-label">Happy Customers</div>
+      <h2 class="section-title">What Dog Owners Say</h2>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial">
+        <div class="stars">★★★★★</div>
+        <blockquote>"We have two muddy spaniels and this has completely changed our lives. The hot water shower with the shelter means bath time isn't a nightmare anymore — even in winter."</blockquote>
+        <div class="testimonial-author">Sarah & Mark T.</div>
+        <div class="testimonial-loc">Surrey</div>
+      </div>
+      <div class="testimonial">
+        <div class="stars">★★★★★</div>
+        <blockquote>"Excellent service from start to finish. The team were really helpful, the installation was quick and tidy, and the result looks brilliant in our garden."</blockquote>
+        <div class="testimonial-author">James R.</div>
+        <div class="testimonial-loc">Hampshire</div>
+      </div>
+      <div class="testimonial">
+        <div class="stars">★★★★★</div>
+        <blockquote>"The bespoke shelter they built for us is absolutely stunning. Really well made, feels solid, and our Lab absolutely loves it (or at least tolerates it!)."</blockquote>
+        <div class="testimonial-author">Claire W.</div>
+        <div class="testimonial-loc">Gloucestershire</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKING FORM -->
+<section class="booking-bg" id="booking">
+  <div class="booking-inner">
+    <div class="booking-header">
+      <div class="section-label">Get Started</div>
+      <h2 class="section-title">Book Your Free Site Survey</h2>
+      <p class="section-sub" style="margin:0 auto;text-align:center;">Tell us a bit about your project and we'll be in touch to arrange a free, no-obligation site visit.</p>
+    </div>
+    <div class="booking-form">
+      <div id="booking-success" class="success-msg">
+        <div style="font-size:48px;margin-bottom:12px;">🐾</div>
+        <h3>Thanks — we'll be in touch soon!</h3>
+        <p>We'll review your enquiry and contact you within 1 working day to arrange your free site survey.</p>
+      </div>
+      <form id="booking-form-el" onsubmit="handleSubmit(event)">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="first-name">First Name *</label>
+            <input type="text" id="first-name" name="first_name" required placeholder="e.g. Sarah">
+          </div>
+          <div class="form-group">
+            <label for="last-name">Last Name *</label>
+            <input type="text" id="last-name" name="last_name" required placeholder="e.g. Smith">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" name="email" required placeholder="you@example.com">
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number *</label>
+            <input type="tel" id="phone" name="phone" required placeholder="07xxx xxxxxx">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="postcode">Postcode *</label>
+            <input type="text" id="postcode" name="postcode" required placeholder="e.g. GU1 1AA">
+          </div>
+          <div class="form-group">
+            <label for="dog-breed">Dog Breed(s)</label>
+            <input type="text" id="dog-breed" name="dog_breed" placeholder="e.g. Labrador, Spaniel">
+          </div>
+        </div>
+        <div class="form-group">
+          <label>What are you interested in? *</label>
+          <div class="form-check-group">
+            <label class="form-check">
+              <input type="checkbox" name="interest" value="shower_only"> Shower Installation Only
+            </label>
+            <label class="form-check">
+              <input type="checkbox" name="interest" value="shelter_only"> Shelter / Canopy Only
+            </label>
+            <label class="form-check">
+              <input type="checkbox" name="interest" value="shower_and_shelter"> Shower + Shelter Bundle
+            </label>
+            <label class="form-check">
+              <input type="checkbox" name="interest" value="bespoke"> Bespoke Design
+            </label>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="budget">Approximate Budget</label>
+          <select id="budget" name="budget">
+            <option value="">Please select...</option>
+            <option value="under_500">Under £500</option>
+            <option value="500_1000">£500 – £1,000</option>
+            <option value="1000_2000">£1,000 – £2,000</option>
+            <option value="over_2000">Over £2,000</option>
+            <option value="unsure">Not sure yet</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Tell Us More</label>
+          <textarea id="message" name="message" placeholder="Any details about your garden, access, specific requirements, or anything else we should know..."></textarea>
+        </div>
+        <div class="form-group">
+          <label for="preferred-contact">Preferred Contact Method</label>
+          <select id="preferred-contact" name="preferred_contact">
+            <option value="phone">Phone call</option>
+            <option value="email">Email</option>
+            <option value="either">Either is fine</option>
+          </select>
+        </div>
+        <div class="form-submit">
+          <button type="submit">Request My Free Survey →</button>
+        </div>
+        <div class="form-note">We'll never share your details with third parties. We typically respond within 1 working day.</div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">The Outdoor Dog Shower <span>Co.</span></div>
+        <p class="footer-tagline">Professional outdoor dog shower installation and bespoke shelter builds across the UK. Making life easier for dog owners, one garden at a time.</p>
+        <div class="footer-contact">
+          <a href="tel:+441234567890">📞 01234 567 890</a>
+          <a href="mailto:hello@outdoordogshower.co.uk">✉️ hello@outdoordogshower.co.uk</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a href="#services">Dog Shower Installation</a>
+        <a href="#services">Shelter & Canopy Builds</a>
+        <a href="#services">Bespoke Design</a>
+        <a href="#products">Products & Pricing</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="#how-it-works">How It Works</a>
+        <a href="#booking">Book a Survey</a>
+        <a href="#">About Us</a>
+        <a href="#">Privacy Policy</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 The Outdoor Dog Shower Company. All rights reserved.</span>
+      <span>Fully insured · 5-year guarantee · UK-wide</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+function scrollToBooking(product) {
+  document.getElementById('booking').scrollIntoView({behavior:'smooth'});
+  if (product) {
+    setTimeout(() => {
+      const map = {
+        'Essential Shower': 'shower_only',
+        'Comfort Shower': 'shower_only',
+        'Shelter Add-On': 'shelter_only',
+        'Premium Shelter': 'shelter_only',
+        'Complete Station Bundle': 'shower_and_shelter',
+        'Bespoke Design': 'bespoke'
+      };
+      const val = map[product];
+      if (val) {
+        const cb = document.querySelector(`input[value="${val}"]`);
+        if (cb) cb.checked = true;
+      }
+    }, 600);
+  }
+}
+
+function handleSubmit(e) {
+  e.preventDefault();
+  const form = document.getElementById('booking-form-el');
+  const success = document.getElementById('booking-success');
+  form.style.display = 'none';
+  success.style.display = 'block';
+  success.scrollIntoView({behavior:'smooth'});
+}
+
+// Smooth scroll for nav links
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const target = document.querySelector(a.getAttribute('href'));
+    if (target) {
+      e.preventDefault();
+      target.scrollIntoView({behavior:'smooth'});
+    }
+  });
+});
+</script>
+</body>
+</html>
