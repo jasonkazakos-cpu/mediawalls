@@ -1,0 +1,3 @@
+# Cloudflare Pages redirects
+/jobs    /index.html#jobs    302
+/research  /index.html#research  302
