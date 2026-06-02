@@ -182,13 +182,12 @@ footer{background:var(--dark);color:rgba(255,255,255,.6);padding:48px 24px 24px;
 .footer-col a:hover{color:#fff;}
 .footer-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:20px;display:flex;justify-content:space-between;align-items:center;font-size:12px;}
 
-/* MODAL */
-.modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:9999;align-items:center;justify-content:center;}
-.modal-overlay.open{display:flex;}
-.modal{background:#fff;border-radius:16px;padding:40px;max-width:500px;width:90%;text-align:center;}
-.modal h3{font-size:24px;font-weight:800;margin-bottom:12px;color:var(--green-dark);}
-.modal p{color:var(--mid);margin-bottom:24px;}
-.modal-close{background:var(--green);color:#fff;border:none;padding:12px 28px;border-radius:8px;font-size:14px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;}
+/* LIGHTBOX */
+.lightbox{display:none;position:fixed;inset:0;background:rgba(0,0,0,.85);z-index:9999;align-items:center;justify-content:center;cursor:pointer;}
+.lightbox.open{display:flex;}
+.lightbox img{max-width:90vw;max-height:90vh;object-fit:contain;border-radius:8px;box-shadow:0 8px 40px rgba(0,0,0,.5);}
+.lightbox-close{position:absolute;top:20px;right:28px;color:#fff;font-size:36px;font-weight:300;cursor:pointer;line-height:1;}
+.product-img img{cursor:zoom-in;}
 
 /* RESPONSIVE */
 @media(max-width:900px){
@@ -713,7 +712,30 @@ footer{background:var(--dark);color:rgba(255,255,255,.6);padding:48px 24px 24px;
   </div>
 </footer>
 
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <span class="lightbox-close">&times;</span>
+  <img id="lightbox-img" src="" alt="">
+</div>
+
 <script>
+function openLightbox(src, alt) {
+  const lb = document.getElementById('lightbox');
+  document.getElementById('lightbox-img').src = src;
+  document.getElementById('lightbox-img').alt = alt;
+  lb.classList.add('open');
+}
+function closeLightbox() {
+  document.getElementById('lightbox').classList.remove('open');
+}
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+
+document.querySelectorAll('.product-img img').forEach(img => {
+  img.addEventListener('click', e => {
+    e.stopPropagation();
+    openLightbox(img.src, img.alt);
+  });
+});
+
 function scrollToBooking(product) {
   document.getElementById('booking').scrollIntoView({behavior:'smooth'});
   if (product) {
